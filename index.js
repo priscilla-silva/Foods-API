@@ -24,7 +24,7 @@ let foodList = [
 ];
 
 app.get("/foods", (req, res) => {
-  res.json(foodList)
+  res.status(200).json(foodList)
 });
 
 app.post("/foods", (req, res) => {
@@ -53,11 +53,16 @@ app.delete("/foods/:id", (req, res) => {
   //get id
   //delete food with id
   //return food list
+  let foundId = false;
   const id = req.params.id;
   for (let i = 0; i < foodList.length; i++) {
     if (foodList[i].id == id) {
       foodList.splice(i, 1) //delete element at index i
+      foundId = true;
     }
+  }
+  if (!foundId) {
+    res.status(404).json({ error: "User id not found" });
   }
   res.json(foodList);
 });
