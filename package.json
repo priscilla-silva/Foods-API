@@ -1,0 +1,27 @@
+{
+  "name": "foods-api",
+  "version": "1.0.0",
+  "description": "An API of different types of food",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priscilla-silva/Foods-API.git"
+  },
+  "keywords": [
+    "food",
+    "fridge",
+    "mat"
+  ],
+  "author": "priscilla silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priscilla-silva/Foods-API/issues"
+  },
+  "homepage": "https://github.com/priscilla-silva/Foods-API#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
